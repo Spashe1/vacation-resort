@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cost Est</title>   
+    <link rel="stylesheet"  href= "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="./css/style.css">
+  
+    </head>
+   
+<body>
+
+    
+    <header>
+        <header>
+            <h1>Addis Resort</h1>
+            <a href="http://127.0.0.1:5502/home.html"><button>Home</button></a>
+            <a href="http://127.0.0.1:5502/index.html"><button>Book</button></a>
+                </header>
+    </header>
+    <fieldset>
+    <form action="my-handling-form-page" method="get">
+       
+            <lable for="fistName">First Name</lable>
+            <input class="form-control" type="text" id="firstName" required>
+            <br>
+            <lable for="lastName">Last Name</lable>
+            <input class="form-control" type="text" id="lastName" required>
+            <br>
+            <lable for="email">Email Address</lable>
+            <input class="form-control" type="email" id="email" required>
+            <br>
+            <lable for="checkInDate">Check-in Date</lable>
+            <input class="form-control" type="date" id="checkInDate" required>
+            <br>
+            <lable for="numberOfNights">Number Of Nights</lable>
+            <input class="form-control" type="number" id="numberOfNights" min="1" max="28">
+            <br>
+       </fieldset>
+       
+            <legend>Select Room Type</legend>
+            <div class="form-check" id="roomType">
+                <input
+                type="radio"
+                name="btn"
+                id="queenbtn"
+                class="form-check-input"/>
+                <lable class="form-check-lable" for="queen">Queen</lable>
+            </div>
+            <div class="form-check">
+                <input type="radio" name="btn" id="kingbtn" class="form-check-input"/>
+                <lable class="form-check-lable" for="king">King</lable>
+            </div>
+            <div class="form-check">
+                <input type="radio" name="btn" id="suitebtn" class="form-check-input"/>
+                <lable class="form-check-lable" for="suite">2-Bedroom Suite</lable>
+            </div>
+            <figure>
+                <img src="./images/king.png" style="width: 100%; height: 100%;" alt="king"></img>
+            </figure>
+        <div>
+            <br>
+            <lable for="numberOfAdults">Adults</lable>
+            <input class="form-control" type="number" id="numberOfAdults" min="1" max="4">
+            <br>
+            <lable for="numberOfChildren">Children</lable>
+            <input class="form-control" type="number" id="numberOfChildren" min="0" max="4">
+        </div>
+       
+            <legend>Discounts</legend>
+            <div class="form-check" id="discountType">
+                <input type="radio" name="btn2" value="aaa/senior" id="aaabtn" class="form-check-input">
+                <lable class="form-check-lable" for="aaa/senior">AAA/Senior(10%)</lable>
+            </div>
+            <div class="form-check">
+                <input type="radio" name="btn2" value="militarybtn" id="military" class="form-check-input">
+                <lable class="form-check-lable" for="military">Military(20%)</lable>
+            </div>
+            <div class="form-check">
+                <input type="radio" name="btn2" value="nonebtn" id="none" class="form-check-input">
+                <lable class="form-check-lable" for="none">None</lable>
+            </div>
+        </fieldset>
+        <br>
+        <figure>
+            <img src="./images/queen.png" style="width: 100%; height: 100%;" alt="queen"></img>
+        </figure>
+        <p>
+            <input type="button" class="btn btn-primary" id="estimateCost"  value="Estimate Total Cost"/>
+        </p>
+        <table class="table table-striped cost-est">
+            <tbody>
+                <tr>
+                    <td>Room Cost:</td>
+                    <td>$<span id="roomCost">0.00</span> </td>
+                </tr>
+                <tr>
+                    <td>Discount:</td>
+                    <td>$<span id="discount">0.00</span></td>
+                </tr>
+                <tr>
+                    <td>Discounted Room Cost:</td>
+                    <td>$<span id="discountedRoom">0.00</span></td>
+                </tr>
+                <tr>
+                    <td>Tax:</td>
+                    <td>$<span id="tax">0.00</span></td>
+                </tr>
+                <tr>
+                    <td>Total Due:</td>
+                    <td>$<span id="totalDue">0.00</span> </td>
+                   
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    <script src="cost-est.js"></script>
+</body>
+</html>
